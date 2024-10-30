@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://dhy3u45unm1dk"]
+
+[ext_resource type="PackedScene" uid="uid://m2lvbspwodgk" path="res://player.tscn" id="1_phk7t"]
+[ext_resource type="PackedScene" uid="uid://b4ltblcbah8nh" path="res://platform.tscn" id="2_p1aso"]
+[ext_resource type="PackedScene" uid="uid://dqt6xdbjds4hf" path="res://bouncyboi.tscn" id="3_hk3wk"]
+[ext_resource type="PackedScene" uid="uid://c083d622a1dq8" path="res://player killing lava.tscn" id="4_d6wc7"]
+[ext_resource type="Script" path="res://bouncyboireverse.gd" id="4_dil16"]
+[ext_resource type="Script" path="res://lava.gd" id="6_uqfib"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_phk7t")]
+scale = Vector2(0.262173, 0.298486)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(0.75, 0.75)
+
+[node name="platform" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(328, 148)
+scale = Vector2(1, 0.279999)
+
+[node name="platform2" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(958, 80)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="platform3" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(1594, 11)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="platform4" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(1290, 42)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="platform5" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(1849, 86)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="platform6" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(1996, -18)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="platform7" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(2204, -311)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="platform8" parent="." instance=ExtResource("2_p1aso")]
+position = Vector2(2443, -644)
+scale = Vector2(0.178565, 0.370972)
+
+[node name="bouncyboi" parent="." instance=ExtResource("3_hk3wk")]
+
+[node name="bouncyboi2" parent="." instance=ExtResource("3_hk3wk")]
+position = Vector2(2203, -297)
+
+[node name="bouncyboi3" parent="." instance=ExtResource("3_hk3wk")]
+position = Vector2(2435, -630)
+
+[node name="bouncyboi4" parent="." instance=ExtResource("3_hk3wk")]
+position = Vector2(2600, -977)
+script = ExtResource("4_dil16")
+
+[node name="lava" parent="." instance=ExtResource("4_d6wc7")]
+position = Vector2(374, -142)
+script = ExtResource("6_uqfib")

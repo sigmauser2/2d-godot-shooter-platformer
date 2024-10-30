@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb7jf1y5g3210"]
+
+[ext_resource type="Texture2D" uid="uid://bfpy466uqw23n" path="res://kill brick.png" id="1_0a810"]
+[ext_resource type="Script" path="res://kill_brick.gd" id="1_xpdyy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6gos"]
+
+[node name="kill brick" type="Area2D"]
+scale = Vector2(0.178761, 0.188662)
+script = ExtResource("1_xpdyy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_g6gos")
+
+[node name="KillBrick" type="Sprite2D" parent="."]
+position = Vector2(2.32458e-06, -1.89543e-05)
+scale = Vector2(0.099503, 0.178571)
+texture = ExtResource("1_0a810")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
